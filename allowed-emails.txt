@@ -1,0 +1,17 @@
+user@organisation.com.au
+first.last@organisation.com.au
+break.glass_priv1@organisation.onmicrosoft.com
+break.glass_priv2@organisation.onmicrosoft.com
+first.last@<tenant>.onmicrosoft.com
+user.name_priv@domain.gov.au
+user.name@domain.gov.au
+joe.bloggs_priv@domain.gov.au
+joe.bloggs@domain.gov.au
+ITServiceDesk@Organisation.com.au
+john.smith3@organisation.com.au
+o365-teams@organisation.com.au
+o365-outlook@organisation.com.au
+Office365_Group_Expiration@organisation.com.au
+martin.donath@squidfunk.com
+user@Organisation.gov.au
+your.name@desktop.gov.au

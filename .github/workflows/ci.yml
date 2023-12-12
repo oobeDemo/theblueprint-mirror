@@ -1,0 +1,42 @@
+name: ci 
+
+on:
+  push:
+    branches: [ "develop" ]
+
+  workflow_dispatch:  
+
+permissions:
+  contents: write
+  
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps: 
+    - name: Checkout the code
+      uses: actions/checkout@v4
+
+    - name: Python setup
+      uses: actions/setup-python@v5
+      with:
+          python-version: 3.x
+
+    - name: Cache
+      uses: actions/cache@v3
+      with:
+        key: ${{ github.ref }}
+        path: .cache
+    - run: | 
+        pip install -r requirements.txt
+        mkdocs gh-deploy --force    
+
+    - name: Get the gh-pages branch
+      run: git checkout gh-pages
+
+    - name: Deploy the website
+      uses: tibor19/static-website-deploy@v3
+      with:
+        enabled-static-website: 'true'
+        folder: '.'
+        connection-string: ${{ secrets.CONNECTION_STRING }}
+

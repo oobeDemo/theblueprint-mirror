@@ -1,0 +1,35 @@
+name: 'Check for sensitive data'
+on:
+  push:
+    branches:
+      - develop
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Run script
+        run: |
+          git grep -n -P '\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b' -- './*' ':!allowed-emails.txt' | while read -r match
+          do
+            file=$(echo $match | cut -d ':' -f 1)
+            line_number=$(echo $match | cut -d ':' -f 2)
+            email=$(echo $match | grep -o -P '\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b')
+            if ! grep -Fxq "$email" allowed-emails.txt
+            then
+              echo "Sensitive data found in $file at line $line_number: $email" >> output.log
+            fi
+          done
+          if [ -f output.log ]; then
+            echo "Scan complete, sensitive data found."
+            exit 1
+          else
+            echo "Scan complete, no sensitive data found."
+          fi
+      - name: Upload output
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: output-log
+          path: output.log

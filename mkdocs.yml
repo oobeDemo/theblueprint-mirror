@@ -1,0 +1,106 @@
+site_name: The blueprint
+site_url: https://blueprintdemostatic.z8.web.core.windows.net/ # Primary URL
+
+site_name_oobe: oobe a Fujitsu company
+site_url_oobe: https://www.oobe.com.au
+site_name_o: oobe.com.au
+
+site_url_pp: https://www.oobe.com.au/about/privacy
+site_name_pp: Privacy policy
+
+site_url_c: https://www.oobe.com.au/about/contact
+site_name_c: Contact Us
+
+site_url_ms: https://www.macrosine.com.au/
+site_url_p365: https://www.perimeta.com.au/
+site_url_cs: https://www.oobe.com.au/about/contact
+
+search_placeholder: Search the blueprint
+
+theme: 
+  name: material
+  palette:
+    scheme: default
+    primary: oobeprimary
+    accent: oobeprimary
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: cyan
+      accent: cyan
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  # custom_dir: overrides
+  favicon: 'docs/img/favicon.ico'
+  features:
+    - navigation.instant # instant load to page
+    - navigation.indexes # hide index page
+    - navigation.tabs # Navbar on
+    - navigation.path # Breadcrumbs
+    - navigation.tabs.sticky # Navbar sticky
+    - navigation.top # Back to Up
+    - navigation.tracking # Anchor tracking
+    - navigation.sections
+    - navigation.prune
+    - toc.follow
+    - toc.integrate # Integrate TOC into Nav
+    - search.share
+    - search.suggest
+    - search.highlight
+
+markdown_extensions:
+  - toc:
+      toc_depth: 3
+  - meta 
+
+extra_css:
+  - css/oobe.css
+
+docs_dir: docs
+
+plugins:
+  - search
+  - simple
+  - awesome-pages
+  - git-revision-date-localized:
+      fallback_to_build_date: true
+      enable_creation_date: true
+      timezone: Australia/Sydney
+  # - table-reader
+  
+# extra_javascript:
+#   - js/jquery-3.7.0.min.js
+#   - js/extra.js  
+  
+# extra:
+#   analytics:
+#     provider: google
+#     property: G-LWY9H8XN56
+
+# # The 3 selected posts for the home page
+# first_news_link: news/october-2023-news-update
+# second_news_link: news/intro-the-blueprint-2023-04-23
+# third_news_link: news/windows-11-2023-04-23
+
+# Markdown Extensions 
+markdown_extensions:
+  - attr_list
+  - meta
+  - md_in_html
+  # removed for testing
+  - admonition
+  - footnotes
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  
