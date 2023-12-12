@@ -6,6 +6,7 @@ title: News
 
 |                                                                                                                                                         |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [**December 2023 Update**<br><em>08 Dec 2023</em><br>Microsoft 365 Copilot](../news/copilot-2023-12-08.md) |
 | [**November 2023 Update**<br><em>13 Nov 2023</em><br>Windows Information Protection sunset](../news/wip-guidance-2023-11-13.md) |
 | [**October 2023 Update**<br><em>11 Oct 2023</em><br>Macro Execution Logging and Renaming AzureAD to Microsoft Entra ID](../news/october2023newsupdate.md) |
 | [**Introducing The blueprint**<br><em>23 April 2023</em><br>Many of you will be familiar with desktop.gov.au, and the Digital Transformation Agency (DTA) PROTECTED Utility Blueprint. You may know it better as the DTA Blueprint, which still lives at desktop.gov.au........<br>](../news/intro-the-blueprint-2023-04-23.md) |

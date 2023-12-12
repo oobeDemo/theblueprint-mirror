@@ -14,8 +14,8 @@ The announcement by the Microsoft Endpoint Manager team is [here](https://techco
 
 Your organisation falls into one of three categories:
 1. You have already implemented the blueprint recommendations and you have at least some unmanaged devices, or
-2. You have already implmented the blueprint recommendations and you only have managed devices.
-3. You haven't yet implemented the blueprint recommended configurations
+2. You have already implmented the blueprint recommendations and you only have managed devices, or
+3. You haven't yet implemented the blueprint recommended configurations.
 
 ### Scenario 1:
 If your organisation is using WIP without enrollment (unmanaged devices), Microsoft should have already been in touch with you about the impact to your devices and the timelines for that impact.
@@ -27,7 +27,7 @@ If you are only using WIP with managed devices, Microsoft Endpoint Manager will 
 
 ### Scenario 3:
 
-For all new configurations we recommend using the Alternative Products / Features listed below. More information on the configuration of these is the subject of future work in early 2024.
+For all new blueprint deployments, we recommend using the alternative products/features listed below. More information on how to configure these is planned to be published in early 2024.
 
 1. Conditional Access + session controls using Microsoft Defender for Cloud Apps
 2. Using Windows MAM (Only for unmanaged devices)
@@ -40,5 +40,5 @@ For all new configurations we recommend using the Alternative Products / Feature
 | --- | --- | --- |
 | Unsanctioned Application Protections | Currently admins can define a set of sanctioned applications, with their own enforcement on activities. This Unsanctioned App Protection feature would extend this to unsanctioned applications as well. | In planning |
 | Context based classification | This set of scenarios involves admins being able to scope protection to the context of where the file originates such as the originating source location or source application of the file. | In planning |
-| Identity | Any protections that rely on the context of the user’s identity including identity separation in Outlook, Edge, and access within enlightened apps. These scenarios will not be supported in Purview. For user level restrictions, our guidance will be to use Tenant Level Restrictions within Azure AD. | Not Planned |
+| Identity | Any protections that rely on the context of the user’s identity including identity separation in Outlook, Edge, and access within enlightened apps. These scenarios will not be supported in Purview. For user level restrictions, our guidance will be to use Tenant Level Restrictions within Entra ID. | Not planned |
 
