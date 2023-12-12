@@ -30,13 +30,8 @@ jobs:
         pip install -r requirements.txt
         mkdocs gh-deploy --force    
 
-    - name: Deploy to GitHub Pages
-      uses: mhausenblas/mkdocs-deploy-gh-pages@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
-    # - name: Get the gh-pages branch
-    #   run: git checkout gh-pages
+    - name: Get the gh-pages branch
+      run: git checkout gh-pages
 
     # - name: Deploy the website
     #   uses: tibor19/static-website-deploy@v3
